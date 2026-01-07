@@ -1,0 +1,1412 @@
+{
+  "info": {
+    "name": "Kodak Portra",
+    "description": "KODAK PROFESSIONAL PORTRA 400 is the world's finest grain high-speed color negative film. At true ISO 400 speed, this film delivers spectacular skin tones plus exceptional color saturation over a wide range of lighting conditions. PORTRA 400 Film is the ideal choice for portrait and fashion photography, as well as for nature, travel and outdoor photography, where the action is fast or the lighting can't be controlled.",
+    "format_mm": 35,
+    "version": "1.0.0"
+  },
+  "processing": {
+    "gamma": {
+      "r_factor": 1.0,
+      "g_factor": 1.0,
+      "b_factor": 1.0
+    },
+    "balance": {
+      "r_shift": 0.0,
+      "g_shift": 0.0,
+      "b_shift": 0.0
+    }
+  },
+  "properties": {
+    "calibration": {
+      "iso": 400,
+      "middle_gray_logE": -1.44
+    },
+    "halation": {
+      "strength": {
+        "r": 0.075,
+        "g": 0.047,
+        "b": 0.015
+      },
+      "size_um": {
+        "r": 325.0,
+        "g": 170.0,
+        "b": 90.0
+      }
+    },
+    "couplers": {
+      "saturation_amount": 1.3,
+      "dir_amount_rgb": [
+        0.12,
+        0.16,
+        0.11
+      ],
+      "dir_diffusion_um": 10.0,
+      "dir_diffusion_interlayer": 1.5,
+      "dye_mix_matrix": [
+        [
+          1.0,
+          0.05,
+          0.01
+        ],
+        [
+          0.03,
+          1.0,
+          0.03
+        ],
+        [
+          0.01,
+          0.08,
+          1.0
+        ]
+      ]
+    },
+    "interlayer": {
+      "diffusion_um": 2.1
+    },
+    "curves": {
+      "hd": [
+        {
+          "d": -3.4,
+          "r": 0.213,
+          "g": 0.6402,
+          "b": 0.8619
+        },
+        {
+          "d": -3.3,
+          "r": 0.2156,
+          "g": 0.6441,
+          "b": 0.8616
+        },
+        {
+          "d": -3.2,
+          "r": 0.2182,
+          "g": 0.6482,
+          "b": 0.867
+        },
+        {
+          "d": -3.1,
+          "r": 0.2219,
+          "g": 0.6524,
+          "b": 0.8749
+        },
+        {
+          "d": -3,
+          "r": 0.2263,
+          "g": 0.656,
+          "b": 0.8852
+        },
+        {
+          "d": -2.9,
+          "r": 0.2307,
+          "g": 0.6589,
+          "b": 0.9079
+        },
+        {
+          "d": -2.8,
+          "r": 0.2455,
+          "g": 0.677,
+          "b": 0.9413
+        },
+        {
+          "d": -2.7,
+          "r": 0.2653,
+          "g": 0.702,
+          "b": 0.9823
+        },
+        {
+          "d": -2.6,
+          "r": 0.3005,
+          "g": 0.735,
+          "b": 1.0363
+        },
+        {
+          "d": -2.5,
+          "r": 0.3373,
+          "g": 0.7768,
+          "b": 1.0943
+        },
+        {
+          "d": -2.4,
+          "r": 0.3848,
+          "g": 0.8275,
+          "b": 1.1578
+        },
+        {
+          "d": -2.3,
+          "r": 0.4354,
+          "g": 0.879,
+          "b": 1.2213
+        },
+        {
+          "d": -2.2,
+          "r": 0.4885,
+          "g": 0.9338,
+          "b": 1.2848
+        },
+        {
+          "d": -2.1,
+          "r": 0.5424,
+          "g": 0.9885,
+          "b": 1.3482
+        },
+        {
+          "d": -2,
+          "r": 0.597,
+          "g": 1.0433,
+          "b": 1.4117
+        },
+        {
+          "d": -1.9,
+          "r": 0.6516,
+          "g": 1.098,
+          "b": 1.4752
+        },
+        {
+          "d": -1.8,
+          "r": 0.7062,
+          "g": 1.1527,
+          "b": 1.5387
+        },
+        {
+          "d": -1.7,
+          "r": 0.7608,
+          "g": 1.2075,
+          "b": 1.6021
+        },
+        {
+          "d": -1.6,
+          "r": 0.8154,
+          "g": 1.2622,
+          "b": 1.6656
+        },
+        {
+          "d": -1.5,
+          "r": 0.87,
+          "g": 1.317,
+          "b": 1.7291
+        },
+        {
+          "d": -1.4,
+          "r": 0.9246,
+          "g": 1.3717,
+          "b": 1.7926
+        },
+        {
+          "d": -1.3,
+          "r": 0.9792,
+          "g": 1.4264,
+          "b": 1.856
+        },
+        {
+          "d": -1.2,
+          "r": 1.0338,
+          "g": 1.4812,
+          "b": 1.9195
+        },
+        {
+          "d": -1.1,
+          "r": 1.0883,
+          "g": 1.5359,
+          "b": 1.983
+        },
+        {
+          "d": -1,
+          "r": 1.1429,
+          "g": 1.5907,
+          "b": 2.0465
+        },
+        {
+          "d": -0.9,
+          "r": 1.1975,
+          "g": 1.6454,
+          "b": 2.1099
+        },
+        {
+          "d": -0.8,
+          "r": 1.2521,
+          "g": 1.7002,
+          "b": 2.1734
+        },
+        {
+          "d": -0.7,
+          "r": 1.3067,
+          "g": 1.7549,
+          "b": 2.2369
+        },
+        {
+          "d": -0.6,
+          "r": 1.3613,
+          "g": 1.8096,
+          "b": 2.3004
+        },
+        {
+          "d": -0.5,
+          "r": 1.4159,
+          "g": 1.8644,
+          "b": 2.3638
+        },
+        {
+          "d": -0.4,
+          "r": 1.4705,
+          "g": 1.9191,
+          "b": 2.4273
+        },
+        {
+          "d": -0.3,
+          "r": 1.5251,
+          "g": 1.9739,
+          "b": 2.4908
+        },
+        {
+          "d": -0.2,
+          "r": 1.5797,
+          "g": 2.0286,
+          "b": 2.5543
+        },
+        {
+          "d": -0.1,
+          "r": 1.6343,
+          "g": 2.0834,
+          "b": 2.6177
+        },
+        {
+          "d": 0,
+          "r": 1.6889,
+          "g": 2.1381,
+          "b": 2.6812
+        },
+        {
+          "d": 0.1,
+          "r": 1.7435,
+          "g": 2.1928,
+          "b": 2.7447
+        },
+        {
+          "d": 0.2,
+          "r": 1.7981,
+          "g": 2.2476,
+          "b": 2.8082
+        },
+        {
+          "d": 0.3,
+          "r": 1.8527,
+          "g": 2.3023,
+          "b": 2.8716
+        },
+        {
+          "d": 0.4,
+          "r": 1.9073,
+          "g": 2.3571,
+          "b": 2.9351
+        },
+        {
+          "d": 0.5,
+          "r": 1.9619,
+          "g": 2.4118,
+          "b": 2.9986
+        }
+      ],
+      "spectral_sensitivity": [
+        {
+          "wavelength": 379.664,
+          "y": 1.715,
+          "m": 0.00,
+          "c": 0.00
+        },
+        {
+          "wavelength": 385.87,
+          "y": 2.019,
+          "m": 0.00,
+          "c": 0.00
+        },
+        {
+          "wavelength": 392.077,
+          "y": 2.294,
+          "m": 1.311,
+          "c": 0.00
+        },
+        {
+          "wavelength": 398.283,
+          "y": 2.51,
+          "m": 1.468,
+          "c": 0.00
+        },
+        {
+          "wavelength": 404.489,
+          "y": 2.589,
+          "m": 1.566,
+          "c": 0.00
+        },
+        {
+          "wavelength": 410.695,
+          "y": 2.579,
+          "m": 1.527,
+          "c": 0.00
+        },
+        {
+          "wavelength": 416.901,
+          "y": 2.53,
+          "m": 1.468,
+          "c": 0.00
+        },
+        {
+          "wavelength": 423.108,
+          "y": 2.549,
+          "m": 1.409,
+          "c": 0.00
+        },
+        {
+          "wavelength": 429.314,
+          "y": 2.549,
+          "m": 1.359,
+          "c": 0.00
+        },
+        {
+          "wavelength": 435.52,
+          "y": 2.539,
+          "m": 1.33,
+          "c": 0.00
+        },
+        {
+          "wavelength": 441.726,
+          "y": 2.529,
+          "m": 1.31,
+          "c": 0.00
+        },
+        {
+          "wavelength": 447.933,
+          "y": 2.51,
+          "m": 1.3,
+          "c": 0.00
+        },
+        {
+          "wavelength": 454.139,
+          "y": 2.5,
+          "m": 1.31,
+          "c": 0.00
+        },
+        {
+          "wavelength": 460.345,
+          "y": 2.51,
+          "m": 1.32,
+          "c": 0.00
+        },
+        {
+          "wavelength": 466.551,
+          "y": 2.569,
+          "m": 1.33,
+          "c": 0.00
+        },
+        {
+          "wavelength": 472.757,
+          "y": 2.539,
+          "m": 1.408,
+          "c": 0.00
+        },
+        {
+          "wavelength": 478.964,
+          "y": 2.358,
+          "m": 1.585,
+          "c": 0.00
+        },
+        {
+          "wavelength": 485.17,
+          "y": 2.038,
+          "m": 1.723,
+          "c": 0.00
+        },
+        {
+          "wavelength": 491.376,
+          "y": 1.596,
+          "m": 1.88,
+          "c": 0.399
+        },
+        {
+          "wavelength": 497.582,
+          "y": 1.288,
+          "m": 1.988,
+          "c": 0.47
+        },
+        {
+          "wavelength": 503.788,
+          "y": 1.095,
+          "m": 2.037,
+          "c": 0.549
+        },
+        {
+          "wavelength": 509.995,
+          "y": 0.81,
+          "m": 2.086,
+          "c": 0.644
+        },
+        {
+          "wavelength": 516.201,
+          "y": 0.486,
+          "m": 2.135,
+          "c": 0.706
+        },
+        {
+          "wavelength": 522.407,
+          "y": 0.00,
+          "m": 2.194,
+          "c": 0.765
+        },
+        {
+          "wavelength": 528.613,
+          "y": 0.00,
+          "m": 2.253,
+          "c": 0.804
+        },
+        {
+          "wavelength": 534.82,
+          "y": 0.00,
+          "m": 2.361,
+          "c": 0.804
+        },
+        {
+          "wavelength": 541.026,
+          "y": 0.00,
+          "m": 2.43,
+          "c": 0.775
+        },
+        {
+          "wavelength": 547.232,
+          "y": 0.00,
+          "m": 2.488,
+          "c": 0.774
+        },
+        {
+          "wavelength": 553.438,
+          "y": 0.00,
+          "m": 2.518,
+          "c": 0.833
+        },
+        {
+          "wavelength": 559.644,
+          "y": 0.00,
+          "m": 2.479,
+          "c": 0.981
+        },
+        {
+          "wavelength": 565.851,
+          "y": 0.00,
+          "m": 2.4,
+          "c": 1.138
+        },
+        {
+          "wavelength": 572.057,
+          "y": 0.00,
+          "m": 2.311,
+          "c": 1.315
+        },
+        {
+          "wavelength": 578.263,
+          "y": 0.00,
+          "m": 2.213,
+          "c": 1.599
+        },
+        {
+          "wavelength": 584.469,
+          "y": 0.00,
+          "m": 1.854,
+          "c": 1.796
+        },
+        {
+          "wavelength": 590.675,
+          "y": 0.00,
+          "m": 1.504,
+          "c": 1.982
+        },
+        {
+          "wavelength": 596.882,
+          "y": 0.00,
+          "m": 1.113,
+          "c": 2.09
+        },
+        {
+          "wavelength": 603.088,
+          "y": 0.00,
+          "m": 0.00,
+          "c": 2.159
+        },
+        {
+          "wavelength": 609.294,
+          "y": 0.00,
+          "m": 0.00,
+          "c": 2.238
+        },
+        {
+          "wavelength": 615.5,
+          "y": 0.00,
+          "m": 0.00,
+          "c": 2.297
+        },
+        {
+          "wavelength": 621.707,
+          "y": 0.00,
+          "m": 0.00,
+          "c": 2.355
+        },
+        {
+          "wavelength": 627.913,
+          "y": 0.00,
+          "m": 0.00,
+          "c": 2.385
+        },
+        {
+          "wavelength": 634.119,
+          "y": 0.00,
+          "m": 0.00,
+          "c": 2.385
+        },
+        {
+          "wavelength": 640.325,
+          "y": 0.00,
+          "m": 0.00,
+          "c": 2.414
+        },
+        {
+          "wavelength": 646.531,
+          "y": 0.00,
+          "m": 0.00,
+          "c": 2.522
+        },
+        {
+          "wavelength": 652.738,
+          "y": 0.00,
+          "m": 0.00,
+          "c": 2.601
+        },
+        {
+          "wavelength": 658.944,
+          "y": 0.00,
+          "m": 0.00,
+          "c": 2.571
+        },
+        {
+          "wavelength": 671.356,
+          "y": 0.00,
+          "m": 0.00,
+          "c": 1.805
+        },
+        {
+          "wavelength": 677.562,
+          "y": 0.00,
+          "m": 0.00,
+          "c": 1.132
+        },
+        {
+          "wavelength": 683.769,
+          "y": 0.00,
+          "m": 0.00,
+          "c": 0.744
+        }
+      ],
+      "spectral_density_mid": [
+        {
+          "wavelength": 399.332465,
+          "density": 1.329944
+        },
+        {
+          "wavelength": 402.338669,
+          "density": 1.321285
+        },
+        {
+          "wavelength": 405.344872,
+          "density": 1.346337
+        },
+        {
+          "wavelength": 408.351075,
+          "density": 1.390651
+        },
+        {
+          "wavelength": 411.357278,
+          "density": 1.434041
+        },
+        {
+          "wavelength": 414.363482,
+          "density": 1.498591
+        },
+        {
+          "wavelength": 417.369685,
+          "density": 1.562119
+        },
+        {
+          "wavelength": 420.375888,
+          "density": 1.627691
+        },
+        {
+          "wavelength": 423.382091,
+          "density": 1.682609
+        },
+        {
+          "wavelength": 426.388295,
+          "density": 1.742343
+        },
+        {
+          "wavelength": 429.394498,
+          "density": 1.785174
+        },
+        {
+          "wavelength": 432.400701,
+          "density": 1.822216
+        },
+        {
+          "wavelength": 435.406904,
+          "density": 1.847267
+        },
+        {
+          "wavelength": 438.413108,
+          "density": 1.865995
+        },
+        {
+          "wavelength": 441.419311,
+          "density": 1.878934
+        },
+        {
+          "wavelength": 444.425514,
+          "density": 1.888566
+        },
+        {
+          "wavelength": 447.431717,
+          "density": 1.888566
+        },
+        {
+          "wavelength": 450.437921,
+          "density": 1.888566
+        },
+        {
+          "wavelength": 453.444124,
+          "density": 1.884626
+        },
+        {
+          "wavelength": 456.450327,
+          "density": 1.878934
+        },
+        {
+          "wavelength": 459.45653,
+          "density": 1.865963
+        },
+        {
+          "wavelength": 462.462734,
+          "density": 1.848873
+        },
+        {
+          "wavelength": 465.468937,
+          "density": 1.823821
+        },
+        {
+          "wavelength": 468.47514,
+          "density": 1.79877
+        },
+        {
+          "wavelength": 471.481343,
+          "density": 1.771675
+        },
+        {
+          "wavelength": 474.487547,
+          "density": 1.739036
+        },
+        {
+          "wavelength": 477.49375,
+          "density": 1.709169
+        },
+        {
+          "wavelength": 480.499953,
+          "density": 1.679301
+        },
+        {
+          "wavelength": 483.506156,
+          "density": 1.649434
+        },
+        {
+          "wavelength": 486.51236,
+          "density": 1.619567
+        },
+        {
+          "wavelength": 489.518563,
+          "density": 1.599332
+        },
+        {
+          "wavelength": 492.524766,
+          "density": 1.586952
+        },
+        {
+          "wavelength": 495.530969,
+          "density": 1.585176
+        },
+        {
+          "wavelength": 498.537173,
+          "density": 1.585176
+        },
+        {
+          "wavelength": 501.543376,
+          "density": 1.596899
+        },
+        {
+          "wavelength": 504.549579,
+          "density": 1.614411
+        },
+        {
+          "wavelength": 507.555782,
+          "density": 1.634647
+        },
+        {
+          "wavelength": 510.561986,
+          "density": 1.646516
+        },
+        {
+          "wavelength": 513.568189,
+          "density": 1.64778
+        },
+        {
+          "wavelength": 516.574392,
+          "density": 1.642965
+        },
+        {
+          "wavelength": 519.580595,
+          "density": 1.638149
+        },
+        {
+          "wavelength": 522.586799,
+          "density": 1.631971
+        },
+        {
+          "wavelength": 525.593002,
+          "density": 1.622535
+        },
+        {
+          "wavelength": 528.599205,
+          "density": 1.614825
+        },
+        {
+          "wavelength": 531.605408,
+          "density": 1.614071
+        },
+        {
+          "wavelength": 534.611612,
+          "density": 1.618886
+        },
+        {
+          "wavelength": 537.617815,
+          "density": 1.623702
+        },
+        {
+          "wavelength": 540.624018,
+          "density": 1.62251
+        },
+        {
+          "wavelength": 543.630221,
+          "density": 1.614071
+        },
+        {
+          "wavelength": 546.636425,
+          "density": 1.602275
+        },
+        {
+          "wavelength": 549.642628,
+          "density": 1.584528
+        },
+        {
+          "wavelength": 552.648831,
+          "density": 1.554093
+        },
+        {
+          "wavelength": 555.655034,
+          "density": 1.508076
+        },
+        {
+          "wavelength": 558.661238,
+          "density": 1.466194
+        },
+        {
+          "wavelength": 561.667441,
+          "density": 1.407871
+        },
+        {
+          "wavelength": 564.673644,
+          "density": 1.343856
+        },
+        {
+          "wavelength": 567.679847,
+          "density": 1.273955
+        },
+        {
+          "wavelength": 570.686051,
+          "density": 1.214221
+        },
+        {
+          "wavelength": 573.692254,
+          "density": 1.138678
+        },
+        {
+          "wavelength": 576.698457,
+          "density": 1.07549
+        },
+        {
+          "wavelength": 579.70466,
+          "density": 1.001892
+        },
+        {
+          "wavelength": 582.710864,
+          "density": 0.951206
+        },
+        {
+          "wavelength": 585.717067,
+          "density": 0.898574
+        },
+        {
+          "wavelength": 588.72327,
+          "density": 0.849687
+        },
+        {
+          "wavelength": 591.729474,
+          "density": 0.815004
+        },
+        {
+          "wavelength": 594.735677,
+          "density": 0.780532
+        },
+        {
+          "wavelength": 597.74188,
+          "density": 0.760086
+        },
+        {
+          "wavelength": 600.748083,
+          "density": 0.742428
+        },
+        {
+          "wavelength": 603.754287,
+          "density": 0.732797
+        },
+        {
+          "wavelength": 606.76049,
+          "density": 0.732797
+        },
+        {
+          "wavelength": 609.766693,
+          "density": 0.737612
+        },
+        {
+          "wavelength": 612.772896,
+          "density": 0.745663
+        },
+        {
+          "wavelength": 615.7791,
+          "density": 0.758188
+        },
+        {
+          "wavelength": 618.785303,
+          "density": 0.77553
+        },
+        {
+          "wavelength": 621.791506,
+          "density": 0.790342
+        },
+        {
+          "wavelength": 624.797709,
+          "density": 0.810578
+        },
+        {
+          "wavelength": 627.803913,
+          "density": 0.830813
+        },
+        {
+          "wavelength": 630.810116,
+          "density": 0.851049
+        },
+        {
+          "wavelength": 633.816319,
+          "density": 0.873444
+        },
+        {
+          "wavelength": 636.822522,
+          "density": 0.896336
+        },
+        {
+          "wavelength": 639.828726,
+          "density": 0.921387
+        },
+        {
+          "wavelength": 642.834929,
+          "density": 0.946439
+        },
+        {
+          "wavelength": 645.841132,
+          "density": 0.97149
+        },
+        {
+          "wavelength": 648.847335,
+          "density": 1.001357
+        },
+        {
+          "wavelength": 651.853539,
+          "density": 1.026409
+        },
+        {
+          "wavelength": 654.859742,
+          "density": 1.05146
+        },
+        {
+          "wavelength": 657.865945,
+          "density": 1.07419
+        },
+        {
+          "wavelength": 660.872148,
+          "density": 1.096747
+        },
+        {
+          "wavelength": 663.878352,
+          "density": 1.121799
+        },
+        {
+          "wavelength": 666.884555,
+          "density": 1.145277
+        },
+        {
+          "wavelength": 669.890758,
+          "density": 1.166794
+        },
+        {
+          "wavelength": 672.896961,
+          "density": 1.187321
+        },
+        {
+          "wavelength": 675.903165,
+          "density": 1.202741
+        },
+        {
+          "wavelength": 678.909368,
+          "density": 1.22108
+        },
+        {
+          "wavelength": 681.915571,
+          "density": 1.236013
+        },
+        {
+          "wavelength": 684.921774,
+          "density": 1.246131
+        },
+        {
+          "wavelength": 687.927978,
+          "density": 1.257708
+        },
+        {
+          "wavelength": 690.934181,
+          "density": 1.265394
+        },
+        {
+          "wavelength": 693.940384,
+          "density": 1.269261
+        },
+        {
+          "wavelength": 696.946587,
+          "density": 1.269261
+        }
+      ],
+      "spectral_density_min": [
+        {
+          "wavelength": 399.332465,
+          "density": 0.694271
+        },
+        {
+          "wavelength": 402.338669,
+          "density": 0.670192
+        },
+        {
+          "wavelength": 405.344872,
+          "density": 0.670192
+        },
+        {
+          "wavelength": 408.351075,
+          "density": 0.670192
+        },
+        {
+          "wavelength": 411.357278,
+          "density": 0.679824
+        },
+        {
+          "wavelength": 414.363482,
+          "density": 0.699135
+        },
+        {
+          "wavelength": 417.369685,
+          "density": 0.724187
+        },
+        {
+          "wavelength": 420.375888,
+          "density": 0.743758
+        },
+        {
+          "wavelength": 423.382091,
+          "density": 0.760459
+        },
+        {
+          "wavelength": 426.388295,
+          "density": 0.780078
+        },
+        {
+          "wavelength": 429.394498,
+          "density": 0.790634
+        },
+        {
+          "wavelength": 432.400701,
+          "density": 0.800752
+        },
+        {
+          "wavelength": 435.406904,
+          "density": 0.809848
+        },
+        {
+          "wavelength": 438.413108,
+          "density": 0.814664
+        },
+        {
+          "wavelength": 441.419311,
+          "density": 0.819066
+        },
+        {
+          "wavelength": 444.425514,
+          "density": 0.819479
+        },
+        {
+          "wavelength": 447.431717,
+          "density": 0.814664
+        },
+        {
+          "wavelength": 450.437921,
+          "density": 0.814664
+        },
+        {
+          "wavelength": 453.444124,
+          "density": 0.809848
+        },
+        {
+          "wavelength": 456.450327,
+          "density": 0.803013
+        },
+        {
+          "wavelength": 459.45653,
+          "density": 0.797711
+        },
+        {
+          "wavelength": 462.462734,
+          "density": 0.790585
+        },
+        {
+          "wavelength": 465.468937,
+          "density": 0.785769
+        },
+        {
+          "wavelength": 468.47514,
+          "density": 0.782583
+        },
+        {
+          "wavelength": 471.481343,
+          "density": 0.778911
+        },
+        {
+          "wavelength": 474.487547,
+          "density": 0.773608
+        },
+        {
+          "wavelength": 477.49375,
+          "density": 0.766507
+        },
+        {
+          "wavelength": 480.499953,
+          "density": 0.761691
+        },
+        {
+          "wavelength": 483.506156,
+          "density": 0.752886
+        },
+        {
+          "wavelength": 486.51236,
+          "density": 0.747244
+        },
+        {
+          "wavelength": 489.518563,
+          "density": 0.742428
+        },
+        {
+          "wavelength": 492.524766,
+          "density": 0.742428
+        },
+        {
+          "wavelength": 495.530969,
+          "density": 0.747244
+        },
+        {
+          "wavelength": 498.537173,
+          "density": 0.752059
+        },
+        {
+          "wavelength": 501.543376,
+          "density": 0.761691
+        },
+        {
+          "wavelength": 504.549579,
+          "density": 0.776138
+        },
+        {
+          "wavelength": 507.555782,
+          "density": 0.784602
+        },
+        {
+          "wavelength": 510.561986,
+          "density": 0.785769
+        },
+        {
+          "wavelength": 513.568189,
+          "density": 0.776916
+        },
+        {
+          "wavelength": 516.574392,
+          "density": 0.761983
+        },
+        {
+          "wavelength": 519.580595,
+          "density": 0.738958
+        },
+        {
+          "wavelength": 522.586799,
+          "density": 0.721122
+        },
+        {
+          "wavelength": 525.593002,
+          "density": 0.689553
+        },
+        {
+          "wavelength": 528.599205,
+          "density": 0.666885
+        },
+        {
+          "wavelength": 531.605408,
+          "density": 0.646649
+        },
+        {
+          "wavelength": 534.611612,
+          "density": 0.636264
+        },
+        {
+          "wavelength": 537.617815,
+          "density": 0.630256
+        },
+        {
+          "wavelength": 540.624018,
+          "density": 0.622035
+        },
+        {
+          "wavelength": 543.630221,
+          "density": 0.613134
+        },
+        {
+          "wavelength": 546.636425,
+          "density": 0.607588
+        },
+        {
+          "wavelength": 549.642628,
+          "density": 0.602286
+        },
+        {
+          "wavelength": 552.648831,
+          "density": 0.593141
+        },
+        {
+          "wavelength": 555.655034,
+          "density": 0.587109
+        },
+        {
+          "wavelength": 558.661238,
+          "density": 0.578694
+        },
+        {
+          "wavelength": 561.667441,
+          "density": 0.566874
+        },
+        {
+          "wavelength": 564.673644,
+          "density": 0.552654
+        },
+        {
+          "wavelength": 567.679847,
+          "density": 0.533845
+        },
+        {
+          "wavelength": 570.686051,
+          "density": 0.513609
+        },
+        {
+          "wavelength": 573.692254,
+          "density": 0.483742
+        },
+        {
+          "wavelength": 576.698457,
+          "density": 0.458691
+        },
+        {
+          "wavelength": 579.70466,
+          "density": 0.424008
+        },
+        {
+          "wavelength": 582.710864,
+          "density": 0.394141
+        },
+        {
+          "wavelength": 585.717067,
+          "density": 0.361744
+        },
+        {
+          "wavelength": 588.72327,
+          "density": 0.329591
+        },
+        {
+          "wavelength": 591.729474,
+          "density": 0.299894
+        },
+        {
+          "wavelength": 594.735677,
+          "density": 0.274672
+        },
+        {
+          "wavelength": 597.74188,
+          "density": 0.254437
+        },
+        {
+          "wavelength": 600.748083,
+          "density": 0.233082
+        },
+        {
+          "wavelength": 603.754287,
+          "density": 0.222332
+        },
+        {
+          "wavelength": 606.76049,
+          "density": 0.2127
+        },
+        {
+          "wavelength": 609.766693,
+          "density": 0.203069
+        },
+        {
+          "wavelength": 612.772896,
+          "density": 0.198253
+        },
+        {
+          "wavelength": 615.7791,
+          "density": 0.193438
+        },
+        {
+          "wavelength": 618.785303,
+          "density": 0.191638
+        },
+        {
+          "wavelength": 621.791506,
+          "density": 0.188622
+        },
+        {
+          "wavelength": 624.797709,
+          "density": 0.188622
+        },
+        {
+          "wavelength": 627.803913,
+          "density": 0.183806
+        },
+        {
+          "wavelength": 630.810116,
+          "density": 0.183806
+        },
+        {
+          "wavelength": 633.816319,
+          "density": 0.183806
+        },
+        {
+          "wavelength": 636.822522,
+          "density": 0.183806
+        },
+        {
+          "wavelength": 639.828726,
+          "density": 0.183806
+        },
+        {
+          "wavelength": 642.834929,
+          "density": 0.18709
+        },
+        {
+          "wavelength": 645.841132,
+          "density": 0.188622
+        },
+        {
+          "wavelength": 648.847335,
+          "density": 0.188622
+        },
+        {
+          "wavelength": 651.853539,
+          "density": 0.193438
+        },
+        {
+          "wavelength": 654.859742,
+          "density": 0.193438
+        },
+        {
+          "wavelength": 657.865945,
+          "density": 0.198253
+        },
+        {
+          "wavelength": 660.872148,
+          "density": 0.198253
+        },
+        {
+          "wavelength": 663.878352,
+          "density": 0.202534
+        },
+        {
+          "wavelength": 666.884555,
+          "density": 0.203069
+        },
+        {
+          "wavelength": 669.890758,
+          "density": 0.207885
+        },
+        {
+          "wavelength": 672.896961,
+          "density": 0.207885
+        },
+        {
+          "wavelength": 675.903165,
+          "density": 0.2127
+        },
+        {
+          "wavelength": 678.909368,
+          "density": 0.2127
+        },
+        {
+          "wavelength": 681.915571,
+          "density": 0.2127
+        },
+        {
+          "wavelength": 684.921774,
+          "density": 0.217516
+        },
+        {
+          "wavelength": 687.927978,
+          "density": 0.217516
+        },
+        {
+          "wavelength": 690.934181,
+          "density": 0.217516
+        },
+        {
+          "wavelength": 693.940384,
+          "density": 0.217516
+        },
+        {
+          "wavelength": 696.946587,
+          "density": 0.217516
+        }
+      ]
+    }
+  }
+}

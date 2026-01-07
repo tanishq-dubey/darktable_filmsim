@@ -1,0 +1,128 @@
+name: Build darktable with Film Simulation
+
+on:
+  push:
+    branches: [ main, master ]
+    tags:
+      - 'v*'
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            git cmake gcc g++ pkg-config \
+            libgtk-3-dev libglib2.0-dev libjson-glib-dev libfftw3-dev \
+            libxml2-dev libsqlite3-dev libcurl4-openssl-dev \
+            libpng-dev libjpeg-dev libtiff-dev libexiv2-dev \
+            liblensfun-dev libpugixml-dev libgphoto2-dev \
+            liblcms2-dev libcolord-dev libcolord-gtk-dev \
+            libgraphicsmagick1-dev libopenexr-dev \
+            intltool xsltproc libsecret-1-dev \
+            libheif-dev libjxl-dev libavif-dev \
+            liblua5.4-dev libsdl2-dev libportmidi-dev
+
+      - name: Build darktable with filmsim
+        run: |
+          chmod +x ./scripts/build_darktable_with_filmsim.sh
+          ./scripts/build_darktable_with_filmsim.sh -j$(nproc)
+
+      - name: Create release archive
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          cd build
+          tar -czvf darktable-filmsim-linux-x86_64.tar.gz darktable_custom/
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: darktable-filmsim-linux-x86_64
+          path: build/darktable_custom/
+          retention-days: 7
+
+      - name: Upload release artifact
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-linux
+          path: build/darktable-filmsim-linux-x86_64.tar.gz
+
+  build-macos:
+    runs-on: macos-14
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Install dependencies
+        run: |
+          brew install cmake pkg-config gtk+3 json-glib fftw \
+            libxml2 sqlite curl libpng jpeg-turbo libtiff exiv2 \
+            lensfun pugixml libgphoto2 little-cms2 \
+            graphicsmagick openexr intltool libxslt libomp \
+            libheif jpeg-xl libavif lua sdl2 portmidi \
+            adwaita-icon-theme iso-codes || true
+
+      - name: Build darktable with filmsim
+        run: |
+          export OpenMP_ROOT=$(brew --prefix)/opt/libomp
+          chmod +x ./scripts/build_darktable_with_filmsim.sh
+          ./scripts/build_darktable_with_filmsim.sh -j$(sysctl -n hw.ncpu)
+
+      - name: Create release archive
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          cd build
+          tar -czvf darktable-filmsim-macos-arm64.tar.gz darktable_custom/
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: darktable-filmsim-macos-arm64
+          path: build/darktable_custom/
+          retention-days: 7
+
+      - name: Upload release artifact
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-macos
+          path: build/darktable-filmsim-macos-arm64.tar.gz
+
+  release:
+    needs: [build-linux, build-macos]
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/')
+    permissions:
+      contents: write
+    steps:
+      - name: Download Linux artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: release-linux
+
+      - name: Download macOS artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: release-macos
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            darktable-filmsim-linux-x86_64.tar.gz
+            darktable-filmsim-macos-arm64.tar.gz
+          generate_release_notes: true
+          draft: false
+          prerelease: false

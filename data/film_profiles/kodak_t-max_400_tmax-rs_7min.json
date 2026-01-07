@@ -1,0 +1,830 @@
+{
+  "info": {
+    "name": "Kodak Professional T-MAX - T-MAX RS 7min",
+    "description": "KODAK PROFESSIONAL T-MAX 400 Film ⁄ 400TMY is a continuous-tone panchromatic black-and-white negative film especially useful for photographing dimly lighted subjects or fast action, for extending flash distance range, and for photographing subjects that require good depth of field and fast shutter speeds with maximum image quality for the film speed.ILFORD HP5 Plus is a fast black and white film. It is ideal for action, available light and general purpose photography.",
+    "format_mm": 35,
+    "version": "1.0.0",
+    "film_type": "monochrome_negative"
+  },
+  "processing": {
+    "gamma": {
+      "r_factor": 1.0,
+      "g_factor": 1.0,
+      "b_factor": 1.0
+    },
+    "balance": {
+      "r_shift": 0.0,
+      "g_shift": 0.0,
+      "b_shift": 0.0
+    }
+  },
+  "properties": {
+    "calibration": {
+      "iso": 400,
+      "middle_gray_logE": -1.44
+    },
+    "halation": {
+      "strength": {
+        "r": 0.034999999999999996,
+        "g": 0.034999999999999996,
+        "b": 0.034999999999999996
+      },
+      "size_um": {
+        "r": 250.0,
+        "g": 250.0,
+        "b": 250.0
+      }
+    },
+    "couplers": {
+      "saturation_amount": 1.0,
+      "dir_amount_rgb": [
+        0.18,
+        0.18,
+        0.18
+      ],
+      "dir_diffusion_um": 10.0,
+      "dir_diffusion_interlayer": 0.0
+    },
+    "interlayer": {
+      "diffusion_um": 0.3
+    },
+    "curves": {
+      "hd": [
+        {
+          "d": -3.483509,
+          "density": 0.348415
+        },
+        {
+          "d": -3.445029,
+          "density": 0.342047
+        },
+        {
+          "d": -3.406549,
+          "density": 0.348415
+        },
+        {
+          "d": -3.368068,
+          "density": 0.348415
+        },
+        {
+          "d": -3.329588,
+          "density": 0.348415
+        },
+        {
+          "d": -3.291108,
+          "density": 0.357686
+        },
+        {
+          "d": -3.252628,
+          "density": 0.357686
+        },
+        {
+          "d": -3.214147,
+          "density": 0.357686
+        },
+        {
+          "d": -3.175667,
+          "density": 0.357686
+        },
+        {
+          "d": -3.137187,
+          "density": 0.366957
+        },
+        {
+          "d": -3.098707,
+          "density": 0.376228
+        },
+        {
+          "d": -3.060226,
+          "density": 0.376228
+        },
+        {
+          "d": -3.021746,
+          "density": 0.383252
+        },
+        {
+          "d": -2.983266,
+          "density": 0.386155
+        },
+        {
+          "d": -2.944786,
+          "density": 0.39477
+        },
+        {
+          "d": -2.906305,
+          "density": 0.410503
+        },
+        {
+          "d": -2.867825,
+          "density": 0.422583
+        },
+        {
+          "d": -2.829345,
+          "density": 0.434851
+        },
+        {
+          "d": -2.790864,
+          "density": 0.450396
+        },
+        {
+          "d": -2.752384,
+          "density": 0.46847
+        },
+        {
+          "d": -2.713904,
+          "density": 0.48748
+        },
+        {
+          "d": -2.675424,
+          "density": 0.506022
+        },
+        {
+          "d": -2.636943,
+          "density": 0.524564
+        },
+        {
+          "d": -2.598463,
+          "density": 0.55425
+        },
+        {
+          "d": -2.559983,
+          "density": 0.537487
+        },
+        {
+          "d": -2.521503,
+          "density": 0.518129
+        },
+        {
+          "d": -2.483022,
+          "density": 0.540069
+        },
+        {
+          "d": -2.444542,
+          "density": 0.556591
+        },
+        {
+          "d": -2.406062,
+          "density": 0.585274
+        },
+        {
+          "d": -2.367581,
+          "density": 0.607214
+        },
+        {
+          "d": -2.329101,
+          "density": 0.626545
+        },
+        {
+          "d": -2.290621,
+          "density": 0.645087
+        },
+        {
+          "d": -2.252141,
+          "density": 0.674358
+        },
+        {
+          "d": -2.21366,
+          "density": 0.696298
+        },
+        {
+          "d": -2.17518,
+          "density": 0.719255
+        },
+        {
+          "d": -2.1367,
+          "density": 0.744098
+        },
+        {
+          "d": -2.09822,
+          "density": 0.770426
+        },
+        {
+          "d": -2.059739,
+          "density": 0.798854
+        },
+        {
+          "d": -2.021259,
+          "density": 0.817784
+        },
+        {
+          "d": -1.982779,
+          "density": 0.844112
+        },
+        {
+          "d": -1.944298,
+          "density": 0.87246
+        },
+        {
+          "d": -1.905818,
+          "density": 0.893905
+        },
+        {
+          "d": -1.867338,
+          "density": 0.924621
+        },
+        {
+          "d": -1.828858,
+          "density": 0.955337
+        },
+        {
+          "d": -1.790377,
+          "density": 0.976782
+        },
+        {
+          "d": -1.751897,
+          "density": 1.007498
+        },
+        {
+          "d": -1.713417,
+          "density": 1.047485
+        },
+        {
+          "d": -1.674937,
+          "density": 1.078201
+        },
+        {
+          "d": -1.636456,
+          "density": 1.108917
+        },
+        {
+          "d": -1.597976,
+          "density": 1.14572
+        },
+        {
+          "d": -1.559496,
+          "density": 1.17962
+        },
+        {
+          "d": -1.521015,
+          "density": 1.210336
+        },
+        {
+          "d": -1.482535,
+          "density": 1.25076
+        },
+        {
+          "d": -1.444055,
+          "density": 1.286595
+        },
+        {
+          "d": -1.405575,
+          "density": 1.321869
+        },
+        {
+          "d": -1.367094,
+          "density": 1.364447
+        },
+        {
+          "d": -1.328614,
+          "density": 1.400282
+        },
+        {
+          "d": -1.290134,
+          "density": 1.440987
+        },
+        {
+          "d": -1.251654,
+          "density": 1.476588
+        },
+        {
+          "d": -1.213173,
+          "density": 1.516559
+        },
+        {
+          "d": -1.174693,
+          "density": 1.554439
+        },
+        {
+          "d": -1.136213,
+          "density": 1.590275
+        },
+        {
+          "d": -1.097732,
+          "density": 1.631651
+        },
+        {
+          "d": -1.059252,
+          "density": 1.672481
+        },
+        {
+          "d": -1.020772,
+          "density": 1.711625
+        },
+        {
+          "d": -0.982292,
+          "density": 1.753703
+        },
+        {
+          "d": -0.943811,
+          "density": 1.789539
+        },
+        {
+          "d": -0.905331,
+          "density": 1.831586
+        },
+        {
+          "d": -0.866851,
+          "density": 1.86739
+        },
+        {
+          "d": -0.828371,
+          "density": 1.91156
+        },
+        {
+          "d": -0.78989,
+          "density": 1.945684
+        },
+        {
+          "d": -0.75141,
+          "density": 1.988687
+        },
+        {
+          "d": -0.71293,
+          "density": 2.02225
+        },
+        {
+          "d": -0.674449,
+          "density": 2.057383
+        },
+        {
+          "d": -0.635969,
+          "density": 2.092953
+        },
+        {
+          "d": -0.597489,
+          "density": 2.13294
+        },
+        {
+          "d": -0.559009,
+          "density": 2.163656
+        },
+        {
+          "d": -0.520528,
+          "density": 2.203643
+        },
+        {
+          "d": -0.482048,
+          "density": 2.234359
+        },
+        {
+          "d": -0.443568,
+          "density": 2.265075
+        },
+        {
+          "d": -0.405088,
+          "density": 2.305062
+        },
+        {
+          "d": -0.366607,
+          "density": 2.335778
+        },
+        {
+          "d": -0.328127,
+          "density": 2.366493
+        },
+        {
+          "d": -0.289647,
+          "density": 2.397303
+        },
+        {
+          "d": -0.251166,
+          "density": 2.437196
+        },
+        {
+          "d": -0.212686,
+          "density": 2.467912
+        },
+        {
+          "d": -0.174206,
+          "density": 2.507899
+        },
+        {
+          "d": -0.135726,
+          "density": 2.538615
+        },
+        {
+          "d": -0.097245,
+          "density": 2.569331
+        },
+        {
+          "d": -0.058765,
+          "density": 2.609318
+        },
+        {
+          "d": -0.020285,
+          "density": 2.640034
+        },
+        {
+          "d": 0.018195,
+          "density": 2.666162
+        },
+        {
+          "d": 0.056676,
+          "density": 2.694989
+        },
+        {
+          "d": 0.095156,
+          "density": 2.730825
+        },
+        {
+          "d": 0.133636,
+          "density": 2.762898
+        },
+        {
+          "d": 0.172116,
+          "density": 2.79786
+        },
+        {
+          "d": 0.210597,
+          "density": 2.833039
+        },
+        {
+          "d": 0.249077,
+          "density": 2.864317
+        },
+        {
+          "d": 0.287557,
+          "density": 2.895033
+        },
+        {
+          "d": 0.326038,
+          "density": 2.925749
+        }
+      ],
+      "spectral_sensitivity": [
+        {
+          "wavelength": 380.448179,
+          "sensitivity": 1.733353
+        },
+        {
+          "wavelength": 383.168104,
+          "sensitivity": 1.734606
+        },
+        {
+          "wavelength": 385.888029,
+          "sensitivity": 1.74037
+        },
+        {
+          "wavelength": 388.607954,
+          "sensitivity": 1.744631
+        },
+        {
+          "wavelength": 391.327879,
+          "sensitivity": 1.769692
+        },
+        {
+          "wavelength": 394.047804,
+          "sensitivity": 1.78974
+        },
+        {
+          "wavelength": 396.767728,
+          "sensitivity": 1.820753
+        },
+        {
+          "wavelength": 399.487653,
+          "sensitivity": 1.836282
+        },
+        {
+          "wavelength": 402.207578,
+          "sensitivity": 1.840399
+        },
+        {
+          "wavelength": 404.927503,
+          "sensitivity": 1.844516
+        },
+        {
+          "wavelength": 407.647428,
+          "sensitivity": 1.835894
+        },
+        {
+          "wavelength": 410.367353,
+          "sensitivity": 1.840698
+        },
+        {
+          "wavelength": 413.087278,
+          "sensitivity": 1.845501
+        },
+        {
+          "wavelength": 415.807203,
+          "sensitivity": 1.860162
+        },
+        {
+          "wavelength": 418.527128,
+          "sensitivity": 1.865926
+        },
+        {
+          "wavelength": 421.247052,
+          "sensitivity": 1.87996
+        },
+        {
+          "wavelength": 423.966977,
+          "sensitivity": 1.87996
+        },
+        {
+          "wavelength": 426.686902,
+          "sensitivity": 1.87996
+        },
+        {
+          "wavelength": 429.406827,
+          "sensitivity": 1.87996
+        },
+        {
+          "wavelength": 432.126752,
+          "sensitivity": 1.87996
+        },
+        {
+          "wavelength": 434.846677,
+          "sensitivity": 1.87996
+        },
+        {
+          "wavelength": 437.566602,
+          "sensitivity": 1.876201
+        },
+        {
+          "wavelength": 440.286527,
+          "sensitivity": 1.870437
+        },
+        {
+          "wavelength": 443.006452,
+          "sensitivity": 1.86722
+        },
+        {
+          "wavelength": 445.726376,
+          "sensitivity": 1.862417
+        },
+        {
+          "wavelength": 448.446301,
+          "sensitivity": 1.857614
+        },
+        {
+          "wavelength": 451.166226,
+          "sensitivity": 1.85281
+        },
+        {
+          "wavelength": 453.886151,
+          "sensitivity": 1.848007
+        },
+        {
+          "wavelength": 456.606076,
+          "sensitivity": 1.846128
+        },
+        {
+          "wavelength": 459.326001,
+          "sensitivity": 1.841366
+        },
+        {
+          "wavelength": 462.045926,
+          "sensitivity": 1.835602
+        },
+        {
+          "wavelength": 464.765851,
+          "sensitivity": 1.830256
+        },
+        {
+          "wavelength": 467.485776,
+          "sensitivity": 1.820649
+        },
+        {
+          "wavelength": 470.2057,
+          "sensitivity": 1.809288
+        },
+        {
+          "wavelength": 472.925625,
+          "sensitivity": 1.786232
+        },
+        {
+          "wavelength": 475.64555,
+          "sensitivity": 1.762173
+        },
+        {
+          "wavelength": 478.365475,
+          "sensitivity": 1.738992
+        },
+        {
+          "wavelength": 481.0854,
+          "sensitivity": 1.722076
+        },
+        {
+          "wavelength": 483.805325,
+          "sensitivity": 1.722076
+        },
+        {
+          "wavelength": 486.52525,
+          "sensitivity": 1.722076
+        },
+        {
+          "wavelength": 489.245175,
+          "sensitivity": 1.722494
+        },
+        {
+          "wavelength": 491.9651,
+          "sensitivity": 1.727297
+        },
+        {
+          "wavelength": 494.685024,
+          "sensitivity": 1.7321
+        },
+        {
+          "wavelength": 497.404949,
+          "sensitivity": 1.735358
+        },
+        {
+          "wavelength": 500.124874,
+          "sensitivity": 1.741122
+        },
+        {
+          "wavelength": 502.844799,
+          "sensitivity": 1.744631
+        },
+        {
+          "wavelength": 505.564724,
+          "sensitivity": 1.748139
+        },
+        {
+          "wavelength": 508.284649,
+          "sensitivity": 1.753903
+        },
+        {
+          "wavelength": 511.004574,
+          "sensitivity": 1.760419
+        },
+        {
+          "wavelength": 513.724499,
+          "sensitivity": 1.777711
+        },
+        {
+          "wavelength": 516.444424,
+          "sensitivity": 1.801018
+        },
+        {
+          "wavelength": 519.164348,
+          "sensitivity": 1.820753
+        },
+        {
+          "wavelength": 521.884273,
+          "sensitivity": 1.846128
+        },
+        {
+          "wavelength": 524.604198,
+          "sensitivity": 1.868181
+        },
+        {
+          "wavelength": 527.324123,
+          "sensitivity": 1.891237
+        },
+        {
+          "wavelength": 530.044048,
+          "sensitivity": 1.88422
+        },
+        {
+          "wavelength": 532.763973,
+          "sensitivity": 1.872692
+        },
+        {
+          "wavelength": 535.483898,
+          "sensitivity": 1.863044
+        },
+        {
+          "wavelength": 538.203823,
+          "sensitivity": 1.841429
+        },
+        {
+          "wavelength": 540.923748,
+          "sensitivity": 1.839236
+        },
+        {
+          "wavelength": 543.643672,
+          "sensitivity": 1.853646
+        },
+        {
+          "wavelength": 546.363597,
+          "sensitivity": 1.868056
+        },
+        {
+          "wavelength": 549.083522,
+          "sensitivity": 1.864088
+        },
+        {
+          "wavelength": 551.803447,
+          "sensitivity": 1.859285
+        },
+        {
+          "wavelength": 554.523372,
+          "sensitivity": 1.843371
+        },
+        {
+          "wavelength": 557.243297,
+          "sensitivity": 1.820315
+        },
+        {
+          "wavelength": 559.963222,
+          "sensitivity": 1.802522
+        },
+        {
+          "wavelength": 562.683147,
+          "sensitivity": 1.808286
+        },
+        {
+          "wavelength": 565.403072,
+          "sensitivity": 1.812295
+        },
+        {
+          "wavelength": 568.122996,
+          "sensitivity": 1.821067
+        },
+        {
+          "wavelength": 570.842921,
+          "sensitivity": 1.830673
+        },
+        {
+          "wavelength": 573.562846,
+          "sensitivity": 1.84713
+        },
+        {
+          "wavelength": 576.282771,
+          "sensitivity": 1.852894
+        },
+        {
+          "wavelength": 579.002696,
+          "sensitivity": 1.857405
+        },
+        {
+          "wavelength": 581.722621,
+          "sensitivity": 1.857405
+        },
+        {
+          "wavelength": 584.442546,
+          "sensitivity": 1.857405
+        },
+        {
+          "wavelength": 587.162471,
+          "sensitivity": 1.855525
+        },
+        {
+          "wavelength": 589.882396,
+          "sensitivity": 1.83391
+        },
+        {
+          "wavelength": 592.60232,
+          "sensitivity": 1.807596
+        },
+        {
+          "wavelength": 595.322245,
+          "sensitivity": 1.771571
+        },
+        {
+          "wavelength": 598.04217,
+          "sensitivity": 1.728341
+        },
+        {
+          "wavelength": 600.762095,
+          "sensitivity": 1.699521
+        },
+        {
+          "wavelength": 603.48202,
+          "sensitivity": 1.670701
+        },
+        {
+          "wavelength": 606.201945,
+          "sensitivity": 1.643134
+        },
+        {
+          "wavelength": 608.92187,
+          "sensitivity": 1.633736
+        },
+        {
+          "wavelength": 611.641795,
+          "sensitivity": 1.620579
+        },
+        {
+          "wavelength": 614.36172,
+          "sensitivity": 1.622333
+        },
+        {
+          "wavelength": 617.081644,
+          "sensitivity": 1.628097
+        },
+        {
+          "wavelength": 619.801569,
+          "sensitivity": 1.643134
+        },
+        {
+          "wavelength": 622.521494,
+          "sensitivity": 1.67989
+        },
+        {
+          "wavelength": 625.241419,
+          "sensitivity": 1.694688
+        },
+        {
+          "wavelength": 627.961344,
+          "sensitivity": 1.682336
+        },
+        {
+          "wavelength": 630.681269,
+          "sensitivity": 1.669985
+        }
+      ]
+    }
+  }
+}

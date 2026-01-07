@@ -1,0 +1,426 @@
+{
+  "info": {
+    "description": "NEOPAN 100 ACROSII is a medium-speed, ultrahigh-imagequality black-and-white negative film that boasts the world’s\nhighest standard in grain quality among ISO-100 films, rich\ngradation and outstanding sharpness. These features make it\nan excellent choice for a wide range of photographic applications, including portraits, landscape, architectural subjects,\nproduct photography, photomicrography, duplication work and\nastrophotography.",
+    "film_type": "monochrome_negative",
+    "format_mm": 35,
+    "name": "Fujifilm Neopan ARCOS II",
+    "version": "1.0.0"
+  },
+  "processing": {
+    "balance": {
+      "b_shift": 0.0,
+      "g_shift": 0.0,
+      "r_shift": 0.0
+    },
+    "gamma": {
+      "b_factor": 1.0,
+      "g_factor": 1.0,
+      "r_factor": 1.0
+    }
+  },
+  "properties": {
+    "calibration": {
+      "iso": 100,
+      "middle_gray_logE": -1.24
+    },
+    "couplers": {
+      "dir_amount_rgb": [
+        0.06,
+        0.06,
+        0.06
+      ],
+      "dir_diffusion_interlayer": 0.0,
+      "dir_diffusion_um": 4.0,
+      "saturation_amount": 1.0
+    },
+    "curves": {
+      "hd": [
+        {
+          "d": -3.277849793434143,
+          "density": 0.13001080602407455
+        },
+        {
+          "d": -3.177849793434143,
+          "density": 0.13001080602407455
+        },
+        {
+          "d": -3.077849793434143,
+          "density": 0.12924665317452244
+        },
+        {
+          "d": -2.977849793434143,
+          "density": 0.12514994891191145
+        },
+        {
+          "d": -2.8778497934341427,
+          "density": 0.12757740902535983
+        },
+        {
+          "d": -2.7778497934341426,
+          "density": 0.13435901629097122
+        },
+        {
+          "d": -2.6778497934341425,
+          "density": 0.14103720587551094
+        },
+        {
+          "d": -2.5778497934341424,
+          "density": 0.14731028786740513
+        },
+        {
+          "d": -2.4778497934341424,
+          "density": 0.15573576339162437
+        },
+        {
+          "d": -2.3778497934341423,
+          "density": 0.1784607562940565
+        },
+        {
+          "d": -2.277849793434142,
+          "density": 0.2081552870303425
+        },
+        {
+          "d": -2.177849793434142,
+          "density": 0.24769428227762538
+        },
+        {
+          "d": -2.077849793434142,
+          "density": 0.28723337080801714
+        },
+        {
+          "d": -1.977849793434142,
+          "density": 0.3289925068407997
+        },
+        {
+          "d": -1.8778497934341418,
+          "density": 0.37917669277811633
+        },
+        {
+          "d": -1.7778497934341417,
+          "density": 0.429360878715433
+        },
+        {
+          "d": -1.6778497934341416,
+          "density": 0.4796055878662483
+        },
+        {
+          "d": -1.5778497934341416,
+          "density": 0.5315201770814483
+        },
+        {
+          "d": -1.4778497934341415,
+          "density": 0.5834347662966481
+        },
+        {
+          "d": -1.3778497934341414,
+          "density": 0.6369229565014023
+        },
+        {
+          "d": -1.2778497934341413,
+          "density": 0.6960686097470884
+        },
+        {
+          "d": -1.1778497934341412,
+          "density": 0.7552142629927746
+        },
+        {
+          "d": -1.0778497934341411,
+          "density": 0.8143599162384607
+        },
+        {
+          "d": -0.9778497934341411,
+          "density": 0.875483054380968
+        },
+        {
+          "d": -0.8778497934341412,
+          "density": 0.9379765515384704
+        },
+        {
+          "d": -0.7778497934341412,
+          "density": 1.0004700486959728
+        },
+        {
+          "d": -0.6778497934341412,
+          "density": 1.0646017697717591
+        },
+        {
+          "d": -0.5778497934341412,
+          "density": 1.13746175531971
+        },
+        {
+          "d": -0.47784979343414125,
+          "density": 1.2103217408676608
+        },
+        {
+          "d": -0.37784979343414127,
+          "density": 1.2831817264156116
+        },
+        {
+          "d": -0.2778497934341413,
+          "density": 1.3560417119635624
+        },
+        {
+          "d": -0.17784979343414128,
+          "density": 1.4342031177124013
+        },
+        {
+          "d": -0.07784979343414128,
+          "density": 1.5138056096499006
+        },
+        {
+          "d": 0.022150206565858727,
+          "density": 1.5934081015874
+        },
+        {
+          "d": 0.12215020656585873,
+          "density": 1.6730105935248991
+        },
+        {
+          "d": 0.22215020656585874,
+          "density": 1.7526130854623985
+        },
+        {
+          "d": 0.32215020656585874,
+          "density": 1.8322155773998978
+        },
+        {
+          "d": 0.4221502065658588,
+          "density": 1.911818069337397
+        }
+      ],
+      "spectral_sensitivity": [
+        {
+          "sensitivity": 1.2889355421066284,
+          "wavelength": 400.28173768077977
+        },
+        {
+          "sensitivity": 1.2889355421066284,
+          "wavelength": 402.86756502464414
+        },
+        {
+          "sensitivity": 1.2906986474990845,
+          "wavelength": 406.4877266064286
+        },
+        {
+          "sensitivity": 1.2995145320892334,
+          "wavelength": 410.62505580484867
+        },
+        {
+          "sensitivity": 1.3136197328567505,
+          "wavelength": 417.8653795272112
+        },
+        {
+          "sensitivity": 1.3294882774353027,
+          "wavelength": 422.8646516799927
+        },
+        {
+          "sensitivity": 1.3665146827697754,
+          "wavelength": 431.48409351706505
+        },
+        {
+          "sensitivity": 1.3823829889297485,
+          "wavelength": 438.5520249605179
+        },
+        {
+          "sensitivity": 1.3806198835372925,
+          "wavelength": 445.7923486828804
+        },
+        {
+          "sensitivity": 1.3823829889297485,
+          "wavelength": 453.89462262392044
+        },
+        {
+          "sensitivity": 1.3682777881622314,
+          "wavelength": 464.58271592855453
+        },
+        {
+          "sensitivity": 1.3471198081970215,
+          "wavelength": 473.0297565460205
+        },
+        {
+          "sensitivity": 1.3100935220718384,
+          "wavelength": 481.3044160604477
+        },
+        {
+          "sensitivity": 1.2871724367141724,
+          "wavelength": 485.78652143478394
+        },
+        {
+          "sensitivity": 1.2571985721588135,
+          "wavelength": 490.2686446905136
+        },
+        {
+          "sensitivity": 1.2395669221878052,
+          "wavelength": 495.6126779317856
+        },
+        {
+          "sensitivity": 1.2501459121704102,
+          "wavelength": 502.16345489025116
+        },
+        {
+          "sensitivity": 1.3241987228393555,
+          "wavelength": 511.81721687316895
+        },
+        {
+          "sensitivity": 1.4017778635025024,
+          "wavelength": 520.7814365625381
+        },
+        {
+          "sensitivity": 1.4511464834213257,
+          "wavelength": 528.5389304161072
+        },
+        {
+          "sensitivity": 1.482883334159851,
+          "wavelength": 534.0553671121597
+        },
+        {
+          "sensitivity": 1.5216728448867798,
+          "wavelength": 540.9509062767029
+        },
+        {
+          "sensitivity": 1.539304494857788,
+          "wavelength": 545.260626077652
+        },
+        {
+          "sensitivity": 1.560462474822998,
+          "wavelength": 550.0875115394592
+        },
+        {
+          "sensitivity": 1.5516465902328491,
+          "wavelength": 553.1905055046082
+        },
+        {
+          "sensitivity": 1.5763309001922607,
+          "wavelength": 558.7069511413574
+        },
+        {
+          "sensitivity": 1.6362783908843994,
+          "wavelength": 570.0845956802368
+        },
+        {
+          "sensitivity": 1.6680153608322144,
+          "wavelength": 579.0488064289093
+        },
+        {
+          "sensitivity": 1.652146816253662,
+          "wavelength": 583.7032973766327
+        },
+        {
+          "sensitivity": 1.6151204109191895,
+          "wavelength": 589.2197251319885
+        },
+        {
+          "sensitivity": 1.5692781209945679,
+          "wavelength": 595.7705020904541
+        },
+        {
+          "sensitivity": 1.5199097394943237,
+          "wavelength": 602.4936556816101
+        },
+        {
+          "sensitivity": 1.495225429534912,
+          "wavelength": 607.8377068042755
+        },
+        {
+          "sensitivity": 1.4899358749389648,
+          "wavelength": 611.8026733398438
+        },
+        {
+          "sensitivity": 1.4969886541366577,
+          "wavelength": 615.4228150844574
+        },
+        {
+          "sensitivity": 1.5110938549041748,
+          "wavelength": 619.0429747104645
+        },
+        {
+          "sensitivity": 1.5428308248519897,
+          "wavelength": 621.284031867981
+        },
+        {
+          "sensitivity": 1.5657519102096558,
+          "wavelength": 623.1803178787231
+        },
+        {
+          "sensitivity": 1.5745676755905151,
+          "wavelength": 626.2833118438721
+        },
+        {
+          "sensitivity": 1.571041464805603,
+          "wavelength": 628.3519923686981
+        },
+        {
+          "sensitivity": 1.549883484840393,
+          "wavelength": 630.0758481025696
+        },
+        {
+          "sensitivity": 1.5093307495117188,
+          "wavelength": 632.1445286273956
+        },
+        {
+          "sensitivity": 1.468778133392334,
+          "wavelength": 634.2131912708282
+        },
+        {
+          "sensitivity": 1.445857048034668,
+          "wavelength": 635.9370648860931
+        },
+        {
+          "sensitivity": 1.4511464834213257,
+          "wavelength": 637.8333508968353
+        },
+        {
+          "sensitivity": 1.4881727695465088,
+          "wavelength": 639.7296369075775
+        },
+        {
+          "sensitivity": 1.5199097394943237,
+          "wavelength": 642.6602184772491
+        },
+        {
+          "sensitivity": 1.5216728448867798,
+          "wavelength": 645.4184591770172
+        },
+        {
+          "sensitivity": 1.5093307495117188,
+          "wavelength": 648.176646232605
+        },
+        {
+          "sensitivity": 1.4634885787963867,
+          "wavelength": 650.245326757431
+        },
+        {
+          "sensitivity": 1.1425931453704834,
+          "wavelength": 651.4520347118378
+        },
+        {
+          "sensitivity": 0.892224133014679,
+          "wavelength": 654.7274231910706
+        },
+        {
+          "sensitivity": 0.7229605913162231,
+          "wavelength": 658.3476185798645
+        },
+        {
+          "sensitivity": 0.6242234706878662,
+          "wavelength": 661.4505767822266
+        }
+      ]
+    },
+    "halation": {
+      "size_um": {
+        "b": 140.0,
+        "g": 140.0,
+        "r": 140.0
+      },
+      "strength": {
+        "b": 0.025,
+        "g": 0.025,
+        "r": 0.025
+      }
+    },
+    "interlayer": {
+      "diffusion_um": 2.0
+    }
+  }
+}

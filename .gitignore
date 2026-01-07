@@ -1,0 +1,22 @@
+# Build directories
+build/
+*.o
+*.so
+*.dylib
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.log
