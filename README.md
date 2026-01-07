@@ -33,12 +33,7 @@ A native darktable plugin that simulates analog film characteristics with physic
 
 Download the latest release from the [Releases page](../../releases).
 
-#### macOS
-1. Download `darktable-filmsim-macos-arm64.dmg`
-2. Open the DMG and drag **darktable (Film Simulation)** to your Applications folder
-3. Film profiles and spectral data are bundled inside the app - no additional setup needed!
-
-#### Linux (AppImage)
+#### Linux (AppImage) - Fully Self-Contained
 1. Download `darktable-filmsim-linux-x86_64.AppImage`
 2. Make it executable: `chmod +x darktable-filmsim-linux-x86_64.AppImage`
 3. Run it: `./darktable-filmsim-linux-x86_64.AppImage`
@@ -48,10 +43,27 @@ Download the latest release from the [Releases page](../../releases).
 1. Download and extract `darktable-filmsim-linux-x86_64.tar.gz`
 2. **Important**: Copy film profiles to your darktable config:
    ```bash
-   mkdir -p ~/.config/darktable/filmsim
-   cp darktable_custom/share/darktable/filmsim/* ~/.config/darktable/filmsim/
+   mkdir -p ~/.config/darktable
+   cp -r darktable_custom/share/darktable/filmsim ~/.config/darktable/
    ```
 3. Run: `./darktable_custom/bin/darktable`
+
+#### macOS
+macOS builds require Homebrew runtime dependencies:
+
+1. Install dependencies:
+   ```bash
+   brew install gtk+3 json-glib fftw libxml2 sqlite exiv2 lensfun \
+     pugixml libgphoto2 little-cms2 graphicsmagick openexr libomp \
+     libheif jpeg-xl libavif lua sdl2 librsvg webp adwaita-icon-theme
+   ```
+2. Download and extract `darktable-filmsim-macos-arm64.tar.gz`
+3. Copy film profiles:
+   ```bash
+   mkdir -p ~/.config/darktable
+   cp -r darktable_custom/share/darktable/filmsim ~/.config/darktable/
+   ```
+4. Run: `./darktable_custom/bin/darktable`
 
 ### Building from Source
 
