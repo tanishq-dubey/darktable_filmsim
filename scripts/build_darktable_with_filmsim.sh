@@ -277,7 +277,15 @@ main() {
         # Use sed to insert filmsim after every "grain" line
         # Handle both formats: { {56.0f } and { { 65.0f } (with extra space)
         # The order value 65.5 places it between grain (65.0 in v30/v50) and soften (66.0)
-        sed -i 's/\({ *{ *[0-9.]*f *}, "grain", 0 *},\?\)/\1\n  { {65.5f }, "filmsim", 0},/' "$IOP_ORDER_FILE"
+        # Note: macOS sed requires different syntax, so we use a temp file approach
+        local temp_file=$(mktemp)
+        while IFS= read -r line; do
+            echo "$line" >> "$temp_file"
+            if echo "$line" | grep -q '"grain"'; then
+                echo '  { {65.5f }, "filmsim", 0},' >> "$temp_file"
+            fi
+        done < "$IOP_ORDER_FILE"
+        mv "$temp_file" "$IOP_ORDER_FILE"
         
         local count=$(grep -c '"filmsim"' "$IOP_ORDER_FILE")
         log "iop_order.c patched ($count entries added)"

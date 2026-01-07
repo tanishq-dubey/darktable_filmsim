@@ -30,7 +30,8 @@ jobs:
             libgraphicsmagick1-dev libopenexr-dev \
             intltool xsltproc libsecret-1-dev \
             libheif-dev libjxl-dev libavif-dev \
-            liblua5.4-dev libsdl2-dev libportmidi-dev
+            liblua5.4-dev libsdl2-dev libportmidi-dev \
+            librsvg2-dev libwebp-dev
 
       - name: Build darktable with filmsim
         run: |
@@ -72,7 +73,8 @@ jobs:
             lensfun pugixml libgphoto2 little-cms2 \
             graphicsmagick openexr intltool libxslt libomp \
             libheif jpeg-xl libavif lua sdl2 portmidi \
-            adwaita-icon-theme iso-codes || true
+            adwaita-icon-theme iso-codes librsvg webp \
+            gnu-sed || true
 
       - name: Build darktable with filmsim
         run: |
