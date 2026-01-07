@@ -29,9 +29,39 @@ A native darktable plugin that simulates analog film characteristics with physic
 
 ## Installation
 
-### Prerequisites
+### Pre-built Releases (Recommended)
 
-#### Ubuntu/Debian
+Download the latest release from the [Releases page](../../releases).
+
+#### macOS
+1. Download `darktable-filmsim-macos-arm64.dmg`
+2. Open the DMG and drag **darktable (Film Simulation)** to your Applications folder
+3. Film profiles and spectral data are bundled inside the app - no additional setup needed!
+
+#### Linux (AppImage)
+1. Download `darktable-filmsim-linux-x86_64.AppImage`
+2. Make it executable: `chmod +x darktable-filmsim-linux-x86_64.AppImage`
+3. Run it: `./darktable-filmsim-linux-x86_64.AppImage`
+4. Film profiles are bundled - no additional setup needed!
+
+#### Linux (Tarball)
+1. Download and extract `darktable-filmsim-linux-x86_64.tar.gz`
+2. **Important**: Copy film profiles to your darktable config:
+   ```bash
+   mkdir -p ~/.config/darktable/filmsim
+   cp darktable_custom/share/darktable/filmsim/* ~/.config/darktable/filmsim/
+   ```
+3. Run: `./darktable_custom/bin/darktable`
+
+### Building from Source
+
+If you prefer to build from source, you'll need development dependencies.
+
+#### Prerequisites
+
+<details>
+<summary>Ubuntu/Debian</summary>
+
 ```bash
 sudo apt install git cmake gcc g++ pkg-config \
   libgtk-3-dev libglib2.0-dev libjson-glib-dev libfftw3-dev \
@@ -40,10 +70,14 @@ sudo apt install git cmake gcc g++ pkg-config \
   liblensfun-dev libpugixml-dev libgphoto2-dev \
   liblcms2-dev libcolord-dev libcolord-gtk-dev \
   libgraphicsmagick1-dev libopenexr-dev \
+  librsvg2-dev libwebp-dev \
   intltool xsltproc
 ```
+</details>
 
-#### Fedora
+<details>
+<summary>Fedora</summary>
+
 ```bash
 sudo dnf install git cmake gcc gcc-c++ pkgconfig \
   gtk3-devel glib2-devel json-glib-devel fftw-devel \
@@ -52,18 +86,24 @@ sudo dnf install git cmake gcc gcc-c++ pkgconfig \
   lensfun-devel pugixml-devel libgphoto2-devel \
   lcms2-devel colord-devel colord-gtk-devel \
   GraphicsMagick-devel openexr-devel \
+  librsvg2-devel libwebp-devel \
   intltool libxslt
 ```
+</details>
 
-#### macOS (Homebrew)
+<details>
+<summary>macOS (Homebrew)</summary>
+
 ```bash
 brew install cmake pkg-config gtk+3 json-glib fftw \
-  libxml2 sqlite curl libpng jpeg libtiff exiv2 \
-  lensfun pugixml libgphoto2 little-cms2 colord \
-  graphicsmagick openexr intltool libxslt libomp
+  libxml2 sqlite curl libpng jpeg-turbo libtiff exiv2 \
+  lensfun pugixml libgphoto2 little-cms2 \
+  graphicsmagick openexr intltool libxslt libomp \
+  librsvg webp
 ```
+</details>
 
-### Building
+#### Build Steps
 
 ```bash
 # Clone the repository (with Git LFS for large files)
@@ -73,6 +113,11 @@ cd darktable_filmsim
 
 # Build darktable with the film simulation plugin
 ./scripts/build_darktable_with_filmsim.sh
+
+# Install film profiles (REQUIRED for source builds)
+mkdir -p ~/.config/darktable/filmsim
+cp data/film_profiles/*.json ~/.config/darktable/filmsim/
+cp data/jakob-and-hanika-2019-srgb.coeff ~/.config/darktable/filmsim/
 
 # Run darktable
 ./build/darktable_custom/bin/darktable
@@ -106,6 +151,21 @@ Build options:
 4. Add negadoctor module after film simulation
 5. Use negadoctor's color picker on the film border (if present) to set D-min
 6. Adjust negadoctor settings for final look
+
+## Film Profile Location
+
+The plugin looks for film profiles in this order:
+1. **Bundled location** (for AppImage/DMG): `<app>/share/darktable/filmsim/`
+2. **User config**: `~/.config/darktable/filmsim/`
+
+Each film profile is a JSON file containing:
+- H-D characteristic curves
+- Spectral sensitivity data
+- Halation parameters
+- DIR coupler settings
+- Dye mixing matrix
+
+The `jakob-and-hanika-2019-srgb.coeff` file (~9MB) contains RGB-to-spectral conversion coefficients for the optional spectral mode.
 
 ## Technical Details
 

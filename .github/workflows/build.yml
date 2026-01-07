@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-linux:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -31,32 +31,92 @@ jobs:
             intltool xsltproc libsecret-1-dev \
             libheif-dev libjxl-dev libavif-dev \
             liblua5.4-dev libsdl2-dev libportmidi-dev \
-            librsvg2-dev libwebp-dev
+            librsvg2-dev libwebp-dev \
+            fuse libfuse2 appstream
 
       - name: Build darktable with filmsim
         run: |
           chmod +x ./scripts/build_darktable_with_filmsim.sh
           ./scripts/build_darktable_with_filmsim.sh -j$(nproc)
 
-      - name: Create release archive
-        if: startsWith(github.ref, 'refs/tags/')
+      - name: Create AppImage
+        run: |
+          # Download linuxdeploy
+          wget -q https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage
+          wget -q https://github.com/linuxdeploy/linuxdeploy-plugin-gtk/releases/download/continuous/linuxdeploy-plugin-gtk-x86_64.AppImage
+          chmod +x linuxdeploy*.AppImage
+          
+          # Create AppDir structure
+          mkdir -p AppDir/usr
+          cp -r build/darktable_custom/* AppDir/usr/
+          
+          # Copy film profiles into AppDir
+          mkdir -p AppDir/usr/share/darktable/filmsim
+          cp data/film_profiles/*.json AppDir/usr/share/darktable/filmsim/
+          cp data/jakob-and-hanika-2019-srgb.coeff AppDir/usr/share/darktable/filmsim/
+          
+          # Create desktop file
+          mkdir -p AppDir/usr/share/applications
+          cat > AppDir/usr/share/applications/darktable-filmsim.desktop << 'EOF'
+          [Desktop Entry]
+          Name=darktable (Film Simulation)
+          GenericName=Photo Editor
+          Comment=Virtual lighttable and darkroom for photographers with film simulation
+          Exec=darktable %U
+          Icon=darktable
+          Terminal=false
+          Type=Application
+          Categories=Graphics;Photography;
+          MimeType=image/jpeg;image/png;image/tiff;
+          EOF
+          
+          # Copy icon
+          mkdir -p AppDir/usr/share/icons/hicolor/scalable/apps
+          cp build/darktable/data/pixmaps/darktable.svg AppDir/usr/share/icons/hicolor/scalable/apps/ || true
+          
+          # Create AppImage
+          export DEPLOY_GTK_VERSION=3
+          ./linuxdeploy-x86_64.AppImage --appdir AppDir \
+            --plugin gtk \
+            --desktop-file AppDir/usr/share/applications/darktable-filmsim.desktop \
+            --output appimage || true
+          
+          # Rename output
+          mv darktable*.AppImage darktable-filmsim-linux-x86_64.AppImage 2>/dev/null || \
+          mv Darktable*.AppImage darktable-filmsim-linux-x86_64.AppImage 2>/dev/null || true
+
+      - name: Create tarball fallback
         run: |
           cd build
+          # Include film profiles in the tarball
+          mkdir -p darktable_custom/share/darktable/filmsim
+          cp ../data/film_profiles/*.json darktable_custom/share/darktable/filmsim/
+          cp ../data/jakob-and-hanika-2019-srgb.coeff darktable_custom/share/darktable/filmsim/
           tar -czvf darktable-filmsim-linux-x86_64.tar.gz darktable_custom/
 
-      - name: Upload build artifact
+      - name: Upload AppImage artifact
         uses: actions/upload-artifact@v4
         with:
-          name: darktable-filmsim-linux-x86_64
-          path: build/darktable_custom/
+          name: darktable-filmsim-linux-x86_64-appimage
+          path: darktable-filmsim-linux-x86_64.AppImage
+          retention-days: 7
+          if-no-files-found: ignore
+
+      - name: Upload tarball artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: darktable-filmsim-linux-x86_64-tarball
+          path: build/darktable-filmsim-linux-x86_64.tar.gz
           retention-days: 7
 
-      - name: Upload release artifact
+      - name: Upload release artifacts
         if: startsWith(github.ref, 'refs/tags/')
         uses: actions/upload-artifact@v4
         with:
           name: release-linux
-          path: build/darktable-filmsim-linux-x86_64.tar.gz
+          path: |
+            darktable-filmsim-linux-x86_64.AppImage
+            build/darktable-filmsim-linux-x86_64.tar.gz
 
   build-macos:
     runs-on: macos-14
@@ -74,7 +134,7 @@ jobs:
             graphicsmagick openexr intltool libxslt libomp \
             libheif jpeg-xl libavif lua sdl2 portmidi \
             adwaita-icon-theme iso-codes librsvg webp \
-            gnu-sed || true
+            gnu-sed dylibbundler create-dmg || true
 
       - name: Build darktable with filmsim
         run: |
@@ -82,25 +142,99 @@ jobs:
           chmod +x ./scripts/build_darktable_with_filmsim.sh
           ./scripts/build_darktable_with_filmsim.sh -j$(sysctl -n hw.ncpu)
 
-      - name: Create release archive
-        if: startsWith(github.ref, 'refs/tags/')
+      - name: Create macOS App Bundle
         run: |
-          cd build
-          tar -czvf darktable-filmsim-macos-arm64.tar.gz darktable_custom/
+          APP_NAME="darktable-filmsim"
+          APP_DIR="build/${APP_NAME}.app"
+          
+          # Create app bundle structure
+          mkdir -p "${APP_DIR}/Contents/MacOS"
+          mkdir -p "${APP_DIR}/Contents/Resources"
+          mkdir -p "${APP_DIR}/Contents/Resources/share/darktable"
+          mkdir -p "${APP_DIR}/Contents/Frameworks"
+          
+          # Copy main binary and libraries
+          cp -r build/darktable_custom/bin/* "${APP_DIR}/Contents/MacOS/"
+          cp -r build/darktable_custom/lib/* "${APP_DIR}/Contents/Frameworks/" 2>/dev/null || true
+          cp -r build/darktable_custom/share/darktable/* "${APP_DIR}/Contents/Resources/share/darktable/"
+          
+          # Copy film profiles
+          mkdir -p "${APP_DIR}/Contents/Resources/share/darktable/filmsim"
+          cp data/film_profiles/*.json "${APP_DIR}/Contents/Resources/share/darktable/filmsim/"
+          cp data/jakob-and-hanika-2019-srgb.coeff "${APP_DIR}/Contents/Resources/share/darktable/filmsim/"
+          
+          # Create Info.plist
+          cat > "${APP_DIR}/Contents/Info.plist" << 'EOF'
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+              <key>CFBundleExecutable</key>
+              <string>darktable</string>
+              <key>CFBundleIdentifier</key>
+              <string>org.darktable.filmsim</string>
+              <key>CFBundleName</key>
+              <string>darktable Film Simulation</string>
+              <key>CFBundleDisplayName</key>
+              <string>darktable (Film Simulation)</string>
+              <key>CFBundleVersion</key>
+              <string>1.0</string>
+              <key>CFBundleShortVersionString</key>
+              <string>1.0</string>
+              <key>CFBundlePackageType</key>
+              <string>APPL</string>
+              <key>CFBundleSignature</key>
+              <string>????</string>
+              <key>NSHighResolutionCapable</key>
+              <true/>
+              <key>LSMinimumSystemVersion</key>
+              <string>11.0</string>
+          </dict>
+          </plist>
+          EOF
+          
+          # Bundle dependencies using dylibbundler
+          cd "${APP_DIR}/Contents"
+          dylibbundler -od -b -x MacOS/darktable -d Frameworks/ -p @executable_path/../Frameworks/ 2>/dev/null || echo "dylibbundler completed with warnings"
+          cd -
+          
+          # Create DMG
+          create-dmg \
+            --volname "darktable Film Simulation" \
+            --window-pos 200 120 \
+            --window-size 600 400 \
+            --icon-size 100 \
+            --app-drop-link 425 175 \
+            --icon "${APP_NAME}.app" 175 175 \
+            "build/darktable-filmsim-macos-arm64.dmg" \
+            "${APP_DIR}" || true
+          
+          # Fallback: create zip if DMG fails
+          if [ ! -f "build/darktable-filmsim-macos-arm64.dmg" ]; then
+            cd build
+            zip -r darktable-filmsim-macos-arm64.zip "${APP_NAME}.app"
+            cd -
+          fi
 
-      - name: Upload build artifact
+      - name: Upload macOS artifact
         uses: actions/upload-artifact@v4
         with:
           name: darktable-filmsim-macos-arm64
-          path: build/darktable_custom/
+          path: |
+            build/darktable-filmsim-macos-arm64.dmg
+            build/darktable-filmsim-macos-arm64.zip
+            build/darktable-filmsim.app
           retention-days: 7
+          if-no-files-found: ignore
 
       - name: Upload release artifact
         if: startsWith(github.ref, 'refs/tags/')
         uses: actions/upload-artifact@v4
         with:
           name: release-macos
-          path: build/darktable-filmsim-macos-arm64.tar.gz
+          path: |
+            build/darktable-filmsim-macos-arm64.dmg
+            build/darktable-filmsim-macos-arm64.zip
 
   release:
     needs: [build-linux, build-macos]
@@ -109,22 +243,52 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Download Linux artifact
+      - name: Download Linux artifacts
         uses: actions/download-artifact@v4
         with:
           name: release-linux
+          path: linux-release
 
-      - name: Download macOS artifact
+      - name: Download macOS artifacts
         uses: actions/download-artifact@v4
         with:
           name: release-macos
+          path: macos-release
+
+      - name: List artifacts
+        run: |
+          echo "Linux artifacts:"
+          ls -la linux-release/ || true
+          echo "macOS artifacts:"
+          ls -la macos-release/ || true
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            darktable-filmsim-linux-x86_64.tar.gz
-            darktable-filmsim-macos-arm64.tar.gz
+            linux-release/*
+            macos-release/*
           generate_release_notes: true
           draft: false
           prerelease: false
+          body: |
+            ## Installation
+            
+            ### macOS
+            1. Download `darktable-filmsim-macos-arm64.dmg`
+            2. Open the DMG and drag darktable to Applications
+            3. Film profiles are bundled inside the app
+            
+            ### Linux
+            **AppImage (recommended):**
+            1. Download `darktable-filmsim-linux-x86_64.AppImage`
+            2. Make executable: `chmod +x darktable-filmsim-linux-x86_64.AppImage`
+            3. Run: `./darktable-filmsim-linux-x86_64.AppImage`
+            
+            **Tarball:**
+            1. Download and extract `darktable-filmsim-linux-x86_64.tar.gz`
+            2. Copy film profiles: `cp -r darktable_custom/share/darktable/filmsim ~/.config/darktable/`
+            3. Run: `./darktable_custom/bin/darktable`
+            
+            ## Film Profiles
+            The film simulation module includes 18 film profiles. They are bundled in the release packages.
