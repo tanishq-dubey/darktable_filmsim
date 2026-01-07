@@ -18,9 +18,8 @@
 #include <omp.h>
 #endif
 
-/* Min helper */
+/* Helper functions */
 static inline int filmsim_min_int(int a, int b) { return a < b ? a : b; }
-static inline float filmsim_min_f(float a, float b) { return a < b ? a : b; }
 static inline float filmsim_max_f(float a, float b) { return a > b ? a : b; }
 static inline float filmsim_clamp_f(float x, float lo, float hi) {
     return x < lo ? lo : (x > hi ? hi : x);
